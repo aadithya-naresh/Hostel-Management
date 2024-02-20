@@ -17,9 +17,9 @@ let complaint_complaints = []
 let global_fee_Sid = []
 const app = express()
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "One",
-  password: ""
+  host: "127.0.0.1",
+  user: config.ROOT_USERNAME,
+  password: config.ROOT_PASSWORD
 });
 
 
