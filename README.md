@@ -16,6 +16,7 @@ Web application to create and maintain hostel records, with provisions to includ
  - Then, clone the repo using the following command:
  ```
  git clone https://github.com/aadithya-naresh/Hostel-Management
+```
 
 2. Install the packages using ```npm install --save```. 
 - This project uses JavaScript, so make sure that Python 3, [NodeJS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [MySQL](https://www.apachefriends.org/) are preinstalled.
