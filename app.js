@@ -18,8 +18,8 @@ let global_fee_Sid = []
 const app = express()
 var con = mysql.createConnection({
   host: "127.0.0.1",
-  user: config.ROOT_USERNAME,
-  password: config.ROOT_PASSWORD
+  user: "root", //config.ROOT_USERNAME,
+  password: "", // config.ROOT_PASSWORD
 });
 
 
@@ -29,18 +29,18 @@ con.connect(function(err) {
 
   console.log("Connected!")
 
-  // con.query("CREATE DATABASE HOSTEL",function(err,value){
-  //   if(err) throw err
-  //   console.log("Done")
-  // })
-  // con.query("USE HOSTEL;",function(err,value){
-  //   if(err) throw err
-  //   console.log("Done")
-  // })
-  // con.query("CREATE TABLE STUD_CONTACT(Sid INT(10) PRIMARY KEY,Father_Name varchar(25),Mother_Name varchar(25),Parent_email varchar(50),Parent_Phone INT(10),Student_Phone INT(10),Student_email varchar(50));",function(err,value){
-  //     if(err) throw err
-  //     console.log("Done")
-  // })
+  con.query("CREATE DATABASE HOSTEL",function(err,value){
+    if(err) throw err
+    console.log("Done")
+  })
+  con.query("USE HOSTEL;",function(err,value){
+    if(err) throw err
+    console.log("Done")
+  })
+  con.query("CREATE TABLE STUD_CONTACT(Sid INT(10) PRIMARY KEY,Father_Name varchar(25),Mother_Name varchar(25),Parent_email varchar(50),Parent_Phone INT(10),Student_Phone INT(10),Student_email varchar(50));",function(err,value){
+      if(err) throw err
+      console.log("Done")
+  })
 })
 var i =0
 var j =0
@@ -271,10 +271,11 @@ app.post('/student_signup',(req,res) =>{
     if(k!=0)
     {
       con.query("INSERT INTO Student(Sid,Password,Name) VALUES("+req.body.Sid+",'"+req.body.Password+"','"+req.body.Name+"');",(err,value) =>{
-        if(err) 
+        if(err)
+          {console.log(err) 
         res.render('rc_error.hbs',{
           error:'User already exists. Try logging in'
-        })
+        })}
 
         else
        res.render('student_main.hbs',{
