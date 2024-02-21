@@ -1,6 +1,5 @@
 # Hostel-Management
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10674624.svg)](https://doi.org/10.5281/zenodo.10674624) 
+ 
 ![Github](https://img.shields.io/badge/logo-javascript-blue?logo=javascript) <br>
 
 [![GitHub issues](https://img.shields.io/github/issues/aadithya-naresh/Hostel-Management)](https://github.com/aadithya-naresh/Hostel-Management/issues)
