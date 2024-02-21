@@ -18,7 +18,7 @@ Web application to create and maintain hostel records, with provisions to includ
 ```
 
 2. Install the packages using ```npm install --save```. 
-- This project uses JavaScript, so make sure that Python 3, [NodeJS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [MySQL](https://www.apachefriends.org/) are preinstalled.
+- This project uses JavaScript, so make sure that [NodeJS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [MySQL](https://www.apachefriends.org/) are preinstalled.
 - Install the packages.
 ```
 npm install --save
